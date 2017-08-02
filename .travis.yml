@@ -1,9 +1,17 @@
-nguage: node_js
+language: node_js
 node_js: stable
 install:
 - npm install
+before_install:
+- npm install -g hexo
+- npm install -g hexo-cli
+befor_script:
+- sed -i'' "s~git@github.com:WangYX321/WangYX321.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/WangYX321/WangYX321.gihub.io.git~" _config.yml
 script:
-- hexo g
+- hexo clean
+- hexo generate
+after_success:
+- hexo deploy
 after_script:
 - cd ./public
 - git init

@@ -1,30 +1,21 @@
 nguage: node_js
 node_js: stable
-
-# S: Build Lifecycle
 install:
-  - npm install
-
-
-#before_script:
- # - npm install -g gulp
-
+- npm install
 script:
-  - hexo g
-
+- hexo g
 after_script:
-  - cd ./public
-  - git init
-  - git config user.name "WangYX321"
-  - git config user.email "596868981@qq.com"
-  - git add .
-  - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-# E: Build LifeCycle
-
+- cd ./public
+- git init
+- git config user.name "WangYX321"
+- git config user.email "596868981@qq.com"
+- git add .
+- git commit -m "Update docs"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 branches:
   only:
-    - blog-source
+  - blog-source
 env:
- global:
-   - GH_REF: github.com/WangYX321/WangYX321.github.io.git
+  global:
+  - GH_REF: github.com/WangYX321/WangYX321.github.io.git
+  - secure: xMq0ZYZ84rCMqlO7L2iDSRCN+lnpYc2qLC4L+XH8CvbulCNKIR+uTBD37Cmd6AJ4al9m0DkM3lXPJNCKKAvEvNtac9fc/Fjp9yoIcuejfrj5Zdr1Gb+Y0efhBZYuHj5G10b5gAPnSYK7VCUpQgg025O2KkSv8RlW3Sl2KupwYOdnSo6+Y3k7dQ13dbHygN3V0azejKKZMD4XIJwg1IkMgbl3WUhPVJ4pAMcK3hQqOeuY32eWNAwHRr76a5zXUpvlsJYcpHd8stQAs4fi1BZ6f6sPSYG0pEVTebhuNsPGV8Vlv+lDadm2nGaMP6Sk0oQkjM4iE9G2Gpxg8Ls0c+t6PDmTE5u5nOlfxUZgRcwpczPS/Nse6HG5f+gBQQrr0TqWf0Ax9kgR92a0onZjLRuw8vLd0KHDLK5C06Gabnmw/STVrJ6ChSuU1raUKXC2D/GDwrE2WN6ZJGOCIu5n/22AtULK4M47q99SKnigW3Qoj7YdOoMBgzNDDsGUy2yZ4bxSLXi/OyJvfayZ6+0vZrXTsdjO+g5SZAfOZ3v1MfGXtbd23WLiIb1Jp2Ns0UcYEZa+7CIJvrqX01gyya99/M0ReQtOvzrzbNY9s2NfGgQH19wEA8CGqPPy41RbG+wQlQVEwjdBLa42zhqDP5WkTzw8HKDhtD6aFlcJDeWeJVaw7nI=

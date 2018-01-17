@@ -7,5 +7,5 @@ date: 2017-11-11 16:55:14
 ##### Hold on Fitness
 ###### Chowhound
 
-E-mail：jackieWang321@gmail.com
+E-mail：jackyWong321@gmail.com
 About Me: [More](./Jacky.html)
